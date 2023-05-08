@@ -1,9 +1,13 @@
 import Head from "next/head";
 
-import { getStoryblokApi, StoryblokComponent } from "@storyblok/react";
+import {
+  useStoryblokState,
+  getStoryblokApi,
+  StoryblokComponent,
+} from "@storyblok/react";
 
-export default function Home(props) {
-  const story = props.story;
+export default function Home({ story }) {
+  story = useStoryblokState(story);
 
   return (
     <div>
