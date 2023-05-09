@@ -11,6 +11,8 @@ import Layout from "../components/Layout";
 export default function Home({ story }) {
   story = useStoryblokState(story);
 
+  console.log(story.content);
+
   return (
     <div>
       <Head>
